@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1033" height="601" viewBox="0 0 1033 601">
+  <g id="Group_71" data-name="Group 71" transform="translate(-92 -6165)">
+    <path id="Rectangle_71" data-name="Rectangle 71" d="M43,0H423a0,0,0,0,1,0,0V322a0,0,0,0,1,0,0H43A43,43,0,0,1,0,279V43A43,43,0,0,1,43,0Z" transform="translate(92 6183)" fill="#fff"/>
+    <rect id="Rectangle_72" data-name="Rectangle 72" width="251" height="80" transform="translate(589 6165)" fill="#000810" opacity="0.2"/>
+    <rect id="Rectangle_73" data-name="Rectangle 73" width="251" height="80" transform="translate(589 6275)" fill="#000810" opacity="0.2"/>
+    <rect id="Rectangle_74" data-name="Rectangle 74" width="536" height="120" transform="translate(589 6385)" fill="#000810" opacity="0.2"/>
+    <rect id="Rectangle_75" data-name="Rectangle 75" width="249" height="149" transform="translate(92 6617)" fill="#000810" opacity="0.2"/>
+    <rect id="Rectangle_76" data-name="Rectangle 76" width="249" height="149" transform="translate(876 6617)" fill="#000810" opacity="0.2"/>
+    <rect id="Rectangle_77" data-name="Rectangle 77" width="249" height="149" transform="translate(354 6617)" fill="#000810" opacity="0.2"/>
+    <rect id="Rectangle_78" data-name="Rectangle 78" width="249" height="149" transform="translate(614 6617)" fill="#000810" opacity="0.2"/>
+    <rect id="Rectangle_79" data-name="Rectangle 79" width="251" height="80" transform="translate(874 6165)" fill="#000810" opacity="0.2"/>
+    <rect id="Rectangle_80" data-name="Rectangle 80" width="251" height="80" transform="translate(874 6275)" fill="#000810" opacity="0.2"/>
+    <rect id="Rectangle_81" data-name="Rectangle 81" width="134" height="46" transform="translate(589 6535)" fill="#d01616"/>
+    <text id="Submit" transform="translate(631 6563)" fill="#fff" font-size="14" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Submit</tspan></text>
+  </g>
+</svg>

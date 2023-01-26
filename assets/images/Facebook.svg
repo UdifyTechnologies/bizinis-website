@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="41" height="42" viewBox="0 0 41 42">
+  <g id="Facebook" transform="translate(-0.215 0.342)">
+    <ellipse id="Oval" cx="20.5" cy="21" rx="20.5" ry="21" transform="translate(0.215 -0.342)" fill="#e20001"/>
+    <path id="Shape" d="M12.218,13.78H8.442V27.613H2.721V13.78H0V8.918H2.721V5.773C2.721,3.523,3.789,0,8.493,0L12.73.018V4.737H9.656A1.165,1.165,0,0,0,8.442,6.062V8.923h4.275Z" transform="translate(13.779 7.648)" fill="#fff"/>
+  </g>
+</svg>
