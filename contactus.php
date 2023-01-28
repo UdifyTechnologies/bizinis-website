@@ -9,7 +9,7 @@
 
     <meta name="keywords" content="BIZINIS" />
     <meta name="description" content="BIZINIS">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -30,26 +30,41 @@
 
     <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-                   <script type="text/javascript">
-                            	const form = document.querySelector('form');
-const msgshow = document.querySelector('#msgshow');
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  msgshow.classList.add('show');
-  setTimeout(() => form.submit(), 2000);
-});
-#msgshow {
+<script type="text/javascript">
+// 	function onfun(){
+// const form = document.querySelector('form');
+// const msgshow = document.getElementById('showmsg');
+// form.addEventListener('submit', (e) => {
+//   e.preventDefault();
+// if (msgshow.style.display === "none") {
+//     msgshow.style.display = "block";
+//   } else {
+//     msgshow.style.display = "none";
+//   }
+// });
+// }
+  //msgshow.classList.add('show');
+  // setTimeout(() => form.submit(), 2000);
+
+
+// const a=document.getElementById("showmsg").display;
+// console.log(a)
+
+</script>
+<style>
+/*#showmsg {
   display: none;
 }
 
-#msgshow.show {
+#showmsg.show {
   display: block;
-}
-                           </script>
-
+}*/
+</style>
 
 </head>
+
 <?php
+
 
 use PHPMailer\PHPMailer\PHPMailer; 
 use PHPMailer\PHPMailer\Exception; 
@@ -60,6 +75,7 @@ require 'vendor/phpmailer/phpmailer/src/PHPMailer.php';
 require 'vendor/phpmailer/phpmailer/src/SMTP.php'; 
  
 if ($_SERVER['REQUEST_METHOD']=="POST")  {
+
 
 $uname=$_POST['uname'];
 $mobnum=$_POST['mobilenum'];
@@ -88,36 +104,39 @@ try {
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
-    $mail->setFrom('bhanutej94@gmail.com.com', 'Mailer');
-    $mail->addAddress('developer.mebhanu@gmail.com', 'Joe User');     //Add a recipient
-    $mail->addAddress('Team@biznis.international','HR UIDFY');               //Name is optional
+    $mail->setFrom('bhanutej94@gmail.com', 'Mailer');
+    $mail->addAddress('daniel.k@udifytech.com', 'Joe User');     //Add a recipient
+    $mail->addAddress('team@biznis.international','HR UIDFY');               //Name is optional
     $mail->addReplyTo('info@example.com', 'Information');
 
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = "Recieved message from .$uname";
+    $mail->Subject = "Recieved message from $uname";
     $mail->Body    = "Hello biznis we got enquiry from <h1 style='color:blue'>
-              .$uname.</h1> <b> Mail </b> <br>
-           confirm the user information <h1>'.$uname.' </h1> call him on this <p style='color:red'>' .$mobnum. '</p> and please note his comments he mentioned with us <p style='color: green'>'.$comment . '<p>' 'also get back to him through <i>'.$email.'</i> ";
+              $uname.</h1> <b> Mail </b> <br>
+           confirm the user information <h1>'$uname.' </h1> call him on this <p style='color:red'>' $mobnum. '</p> and please note his comments he mentioned with us <p style='color: green'>'$comment . '<p>' 'also get back to him through <i>'$email.'</i> ";
 
 
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();
-    echo 'Message has been sent';
-    $acmail==true;
+   echo "<script>
+   function onfun(){
+   const x=document.getElementById('showmsg')
+   x.style.display='block'
+   }
+   </script>";
+   // echo 'Message has been sent';
+   // $acmail=true;
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-    //$acmail==false;
+    $acmail=null;
 }
-header("Location:contactus.php");
+// header("Location:contactus.php");
 
 //	"<p style='color:green;''> thankyou for filling your request, our team will contact you soon </p>";)
 
 }
-
 ?>
-
-
 
 <body>
 
@@ -151,11 +170,14 @@ header("Location:contactus.php");
 											<a href="market-place.html">Market Place</a>
 										</li>
 										<li>
-											<a href="/html files/contact-us.html" class="active">Contact Us</a>
+											<a href="contactus.php" class="active">Contact Us</a>
 										</li>
-										<a href="login.html" class="btn btn-secondary-color ls-0 btn-login">
-											<span>Become a Member</span>
-										</a>
+										<a href="#" class="btn btn-secondary-color ls-0 btn-login">
+										<span>Join</span>
+									</a>
+									<a href="#" class="btn btn-secondary-color ls-0 btn-login">
+										<span>Login</span>
+									</a>
 									</ul><!-- End .menu -->
 								</nav><!-- End .main-nav -->
 							</div>
@@ -163,7 +185,7 @@ header("Location:contactus.php");
 				</div>
 			</div>
 			<!-- <div class="top-shape">
-				<img src="/assets/images/Path 5.svg" alt="">
+				<img src="assets/images/Path 5.svg" alt="">
 			</div> -->
 		</header>
     </div>
@@ -265,7 +287,7 @@ header("Location:contactus.php");
                                 <div class="col-sm-12 col-lg-12 mt-2">
                                     <div class="input-group input-light search">
                                         <div class="form-icon">
-                                            <img src="/assets/images/User.svg" alt="" width="20px">
+                                            <img src="assets/images/User.svg" alt="" width="20px">
                                         </div>
                                         <input type="text" class="form-control" 
                                         placeholder="Your Name *" value="" name="uname">
@@ -274,7 +296,7 @@ header("Location:contactus.php");
                                 <div class="col-sm-12 col-lg-12 mt-2">
                                     <div class="input-group input-light search">
                                         <div class="form-icon">
-                                            <img src="/assets/images/smartphone.svg" alt="" width="20px">
+                                            <img src="assets/images/smartphone.svg" alt="" width="20px">
                                         </div>
                                         <input type="text" class="form-control" placeholder="Mobile Number *" value="" name="mobilenum">
                                     </div>
@@ -282,7 +304,7 @@ header("Location:contactus.php");
                                 <div class="col-sm-12 col-lg-12 mt-2">
                                     <div class="input-group input-light search">
                                         <div class="form-icon">
-                                            <img src="/assets/images/message.svg" alt="" width="20px">
+                                            <img src="assets/images/message.svg" alt="" width="20px">
                                         </div>
                                         <input type="email" class="form-control" placeholder="Email *" value=" " name="email">
                                     </div>
@@ -290,26 +312,35 @@ header("Location:contactus.php");
                                 <div class="col-lg-12 mt-2">
                                     <div class="input-group input-light search">
                                         <div class="form-icon">
-                                            <img src="/assets/images/comment.svg" alt="" width="20px">
+                                            <img src="assets/images/comment.svg" alt="" width="20px">
                                         </div>
                                         <textarea class="form-control text-area" placeholder="Comment" value="" name="comment"></textarea>
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-third btn-form d-flex mr-auto ml-auto mb-1" >
-                                <span>Submit Now</span>
-                                <br>
-                            </button>
-                                  <p id="showmsg"> Thankyou for filling your request, our team will contact you soon </p>
 
-                
+
+
+
+                            <button type="submit" class="btn btn-third btn-form d-flex mr-auto ml-auto mb-1" onclick="onfun()" >
+                             
+                             <!-- <a href="javascript: submit()"> -->
+                                <span>
+                                 Submit Now</span>
+                                                                 <br>
+                            </button>
+                            <p id="showmsg" style="color:green;display:none">
+                          Thankyou for filling your request, our team will contact you soon  </p>
+                            
+
                         </form>
+         
                     </div>
                 </div>
             </div>
         </div>
         <div class="about-sec1-shape1">
-            <img src="/assets/images/06.png" alt="">
+            <img src="assets/images/06.png" alt="">
         </div>
     </div>
 
@@ -318,21 +349,21 @@ header("Location:contactus.php");
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
-					<img src="/assets/images/main-logo.svg" alt="">
+					<img src="assets/images/main-logo.svg" alt="">
 				</div>
 				<div class="col-md-6  d-flex justify-content-flex-end align-items-center">
 					<div class="social-icons">
 						<div>
-							<img src="/assets/images/Vk.svg" alt="">
+							<img src="assets/images/Vk.svg" alt="">
 						</div>
 						<div>
-							<img src="/assets/images/Pinterest.svg" alt="">
+							<img src="assets/images/Pinterest.svg" alt="">
 						</div>
 						<div>
-							<img src="/assets/images/Twitter.svg" alt="">
+							<img src="assets/images/Twitter.svg" alt="">
 						</div>
 						<div>
-							<img src="/assets/images/Facebook.svg" alt="">
+							<img src="assets/images/Facebook.svg" alt="">
 						</div>
 						
 					</div>
@@ -348,7 +379,7 @@ header("Location:contactus.php");
 				</div>
 				<div class="col-md-6 d-flex justify-content-flex-end align-items-center">
 					<div class="d-flex gap-4">
-						<p><a href="//html files/contact-us.html">Contact Us</a></p>
+						<p><a href="contactus.php">Contact Us</a></p>
 						<p>Terms & Conditions</p>
 						<p>Privacy Policy</p>
 					</div>
@@ -381,26 +412,29 @@ header("Location:contactus.php");
 						<a href="market-place.html">Market Place</a>
 					</li>
 					<li>
-						<a href="/html files/contact-us.html" class="active">Contact Us</a>
+						<a href="contactus.php" class="active">Contact Us</a>
 					</li>
-					<a href="login.html" class="btn btn-secondary-color ls-0 btn-login">
-						<span>Become a Member</span>
-					</a>
+					<a href="#" class="btn btn-secondary-color ls-0 btn-login">
+										<span>Join</span>
+									</a>
+									<a href="#" class="btn btn-secondary-color ls-0 btn-login">
+										<span>Login</span>
+									</a>
 				</ul>
 			</nav>
 
 			<div class="social-icons">
 				<div>
-					<img src="/assets/images/Vk.svg" alt="">
+					<img src="assets/images/Vk.svg" alt="">
 				</div>
 				<div>
-					<img src="/assets/images/Pinterest.svg" alt="">
+					<img src="assets/images/Pinterest.svg" alt="">
 				</div>
 				<div>
-					<img src="/assets/images/Twitter.svg" alt="">
+					<img src="assets/images/Twitter.svg" alt="">
 				</div>
 				<div>
-					<img src="/assets/images/Facebook.svg" alt="">
+					<img src="assets/images/Facebook.svg" alt="">
 				</div>
 
 			</div>

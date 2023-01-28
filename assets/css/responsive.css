@@ -39,7 +39,13 @@
     
     /* Mobile Layout: 320px. */
     @media only screen and (max-width: 767px) {
-        
+        .globe-row {
+            display: flex !important;
+            flex-direction: column-reverse !important;
+        }
+        .card-row{
+            display: block !important;
+        }
         .sec-1 {
             padding: 120px 0px 100px 0px;
         }
@@ -98,7 +104,7 @@
         }
         .spider-cards{
             width: 1130px !important;
-            height: 2376px !important;
+            height: 2600px !important;
         }
         .card-bg{
             display: none !important;
@@ -210,6 +216,22 @@
         .bott-img {
             left: -20px;
         }
+        .slider-left1 p{
+            padding-right: 0px;
+        }
+
+.footer-bottom .row .col-md-6 .gap-4 {
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.mobile-menu a {
+    margin-bottom: 20px !important;
+}
+.bread-sec {
+    padding: 40px;
+}
     }
     
     /* Wide Mobile Layout: 480px. */

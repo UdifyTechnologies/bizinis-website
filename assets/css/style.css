@@ -858,7 +858,7 @@ a, h1, h2, h3, h4, h5, h6, p, span, button{
     align-items: center;
 }
 .bread-sec{
-    background: url(/assets/images/Group\ 414.svg);
+    background: url(http://bizinis.udifyy.com/assets/images/Group\ 414.svg);
     background-size: cover;
     padding: 60px;
 }
@@ -1113,7 +1113,7 @@ border-radius: 10px 10px 10px 0px;
     object-fit: cover;
 }
 .social-icons{
-    display: none;
+    display: none !important;
     gap: 10px;
     align-items: center;
 }
@@ -1126,4 +1126,12 @@ border-radius: 10px 10px 10px 0px;
 }
 .logo img {
     width: 146px;
+}
+@media only screen and (max-width: 767px){
+
+.sec-1 .container-fluid .globe-row {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+}
+
 }

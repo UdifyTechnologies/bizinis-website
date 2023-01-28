@@ -61,16 +61,16 @@ try {
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
-    $mail->setFrom('bhanutej94@gmail.com.com', 'Mailer');
-    $mail->addAddress('developer.mebhanu@gmail.com', 'Joe User');     //Add a recipient
-    $mail->addAddress('Team@biznis.international','HR UIDFY');               //Name is optional
+    $mail->setFrom('bhanutej94@gmail.com', 'Mailer');
+    $mail->addAddress('daniel.k@udifytech.com', 'Joe User');     //Add a recipient
+    $mail->addAddress('team@biznis.international','HR UIDFY');               //Name is optional
     $mail->addReplyTo('info@example.com', 'Information');
 
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = "Recieved message from .$uname";
+    $mail->Subject = "Recieved message from $uname";
     $mail->Body    = "Hello biznis we got enquiry from <h1 style='color:blue'>
-              .$uname.</h1> <b> Mail </b> <br>
-           confirm the user information <h1>'.$uname.' </h1> call him on this <p style='color:red'>' .$mobnum. '</p> and please note his comments he mentioned with us <p style='color: green'>'.$comment . '<p>' 'also get back to him through <i>'.$email.'</i> ";
+              $uname.</h1> <b> Mail </b> <br>
+           confirm the user information <h1>'$uname.' </h1> call him on this <p style='color:red'>' $mobnum. '</p> and please note his comments he mentioned with us <p style='color: green'>'.$comment . '<p>' 'also get back to him through <i>'.$email.'</i> ";
 
 
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
