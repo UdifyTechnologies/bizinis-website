@@ -104,16 +104,31 @@ try {
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
-    $mail->setFrom('bhanutej94@gmail.com', 'Mailer');
-    $mail->addAddress('daniel.k@udifytech.com', 'Joe User');     //Add a recipient
-    $mail->addAddress('team@biznis.international','HR UIDFY');               //Name is optional
-    $mail->addReplyTo('info@example.com', 'Information');
+    $mail->setFrom($email,$uname);
+    #'bhanutej94@gmail.com.com', 'BizNis Team');
+    $mail->addAddress('daniel.k@udifytech.com', 'BizNis Team');     //Add a recipient
+    $mail->addAddress('team@biznis.international','BizNis Team');               //Name is optional
+    // $mail->addReplyTo('info@example.com', 'Information');
 
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = "Recieved message from $uname";
-    $mail->Body    = "Hello bizNis we got enquiry from <h1 style='color:blue'>
-              $uname.</h1> <b> Mail </b> <br>
-           confirm the user information <h1>'$uname.' </h1> call him on this <p style='color:red'>' $mobnum. '</p> and please note his comments he mentioned with us <p style='color: green'>'$comment . '<p>' 'also get back to him through <i>'$email.'</i> ";
+    $mail->Body    ="
+    <img src='https://biznis.international/assets/images/main-logo.svg' ><br>
+    <br>
+Hello! BizNis Team we got enquiry from <i>
+<h1 style='color:#061840;font-family:poppins;'>$uname</h1> </i>
+Mobile Number <p style='color:#061840;font-size: 25px;font-family:poppins;'> $mobnum </p>
+get back to him through his <b> Email Id:</b><h2><i>$email</i></h2><br/>
+ and Message he mentioned with us <br>
+<h3>Comments:</h3>
+<p style='color: #061840;font-size: 30px;font-family:poppins;'>$comment <p>
+ <br> 
+    Thanking you";
+
+
+
+     // "Hello biznis we got enquiry from <h1 style='color:blue'>
+     //          $uname</h1> <b> Mail </b> <br> confirm the user information <h1>'$comment' </h1> call him on this <p style='color:red'>' $mobnum '</p> and please note his message he mentioned with us <p style='color: green'>'$comment '<p>' 'also get back to him through <i>'$email'</i> ";
 
 
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
@@ -170,14 +185,11 @@ try {
 											<a href="market-place.html">Market Place</a>
 										</li>
 										<li>
-											<a href="contactus.php" class="active">Contact Us</a>
+											<a href="contact-us.html" class="active">Contact Us</a>
 										</li>
-										<a href="#" class="btn btn-secondary-color ls-0 btn-login">
-										<span>Join</span>
-									</a>
-									<a href="#" class="btn btn-secondary-color ls-0 btn-login">
-										<span>Login</span>
-									</a>
+										<a href="login.html" class="btn btn-secondary-color ls-0 btn-login">
+											<span>Become a Member</span>
+										</a>
 									</ul><!-- End .menu -->
 								</nav><!-- End .main-nav -->
 							</div>
@@ -282,7 +294,7 @@ try {
                 </div>
                 <div class="row">
                     <div class="col-sm-8 offset-sm-2 col-10 offset-1">
-                        <form class="book-form-contact" action="" method="post">
+                        <form class="book-form-contact" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                             <div class="row row-joined">
                                 <div class="col-sm-12 col-lg-12 mt-2">
                                     <div class="input-group input-light search">
@@ -379,7 +391,7 @@ try {
 				</div>
 				<div class="col-md-6 d-flex justify-content-flex-end align-items-center">
 					<div class="d-flex gap-4">
-						<p><a href="contactus.php">Contact Us</a></p>
+						<p><a href="contact-us.html">Contact Us</a></p>
 						<p>Terms & Conditions</p>
 						<p>Privacy Policy</p>
 					</div>
@@ -412,14 +424,11 @@ try {
 						<a href="market-place.html">Market Place</a>
 					</li>
 					<li>
-						<a href="contactus.php" class="active">Contact Us</a>
+						<a href="contact-us.html" class="active">Contact Us</a>
 					</li>
-					<a href="#" class="btn btn-secondary-color ls-0 btn-login">
-										<span>Join</span>
-									</a>
-									<a href="#" class="btn btn-secondary-color ls-0 btn-login">
-										<span>Login</span>
-									</a>
+					<a href="login.html" class="btn btn-secondary-color ls-0 btn-login">
+						<span>Become a Member</span>
+					</a>
 				</ul>
 			</nav>
 
