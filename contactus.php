@@ -111,7 +111,7 @@ try {
 
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = "Recieved message from $uname";
-    $mail->Body    = "Hello biznis we got enquiry from <h1 style='color:blue'>
+    $mail->Body    = "Hello bizNis we got enquiry from <h1 style='color:blue'>
               $uname.</h1> <b> Mail </b> <br>
            confirm the user information <h1>'$uname.' </h1> call him on this <p style='color:red'>' $mobnum. '</p> and please note his comments he mentioned with us <p style='color: green'>'$comment . '<p>' 'also get back to him through <i>'$email.'</i> ";
 

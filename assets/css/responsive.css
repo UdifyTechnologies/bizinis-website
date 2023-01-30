@@ -34,6 +34,8 @@
         bottom: -23px;
         left: -10px;
     }
+
+
     }
     
     
@@ -249,6 +251,11 @@
     
     
     @media only screen and (max-width: 991px){
+
+        .slider-left1 p {
+            padding-right: 0px !important;
+        }
+
 
     }
     /* Tablet Layout: 768px. */

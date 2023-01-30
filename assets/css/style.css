@@ -1135,3 +1135,6 @@ border-radius: 10px 10px 10px 0px;
 }
 
 }
+.pc-image img{
+border-radius: 0px 8px 8px 8px;
+}
