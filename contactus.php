@@ -106,7 +106,7 @@ try {
     //Recipients
     $mail->setFrom($email,$uname);
     #'bhanutej94@gmail.com.com', 'BizNis Team');
-    $mail->addAddress('daniel.k@udifytech.com', 'BizNis Team');     //Add a recipient
+    $mail->addAddress('admin@udifytech.com', 'BizNis Team');     //Add a recipient
     $mail->addAddress('team@biznis.international','BizNis Team');               //Name is optional
     // $mail->addReplyTo('info@example.com', 'Information');
 
@@ -115,21 +115,15 @@ try {
     $mail->Body    ="
     <img src='https://biznis.international/assets/images/main-logo.svg' ><br>
     <br>
-Hello! BizNis Team we got enquiry from <i>
-<h1 style='color:#061840;font-family:poppins;'>$uname</h1> </i>
+Hello! BizNis Team we got enquiry from 
+<h1 style='color:#061840;font-family:poppins;'>$uname</h1> 
 Mobile Number <p style='color:#061840;font-size: 25px;font-family:poppins;'> $mobnum </p>
-get back to him through his <b> Email Id:</b><h2><i>$email</i></h2><br/>
+get back to him through his <b> Email Id:</b><h2>$email</h2><br/>
  and Message he mentioned with us <br>
 <h3>Comments:</h3>
 <p style='color: #061840;font-size: 30px;font-family:poppins;'>$comment <p>
  <br> 
     Thanking you";
-
-
-
-     // "Hello biznis we got enquiry from <h1 style='color:blue'>
-     //          $uname</h1> <b> Mail </b> <br> confirm the user information <h1>'$comment' </h1> call him on this <p style='color:red'>' $mobnum '</p> and please note his message he mentioned with us <p style='color: green'>'$comment '<p>' 'also get back to him through <i>'$email'</i> ";
-
 
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
@@ -185,11 +179,14 @@ get back to him through his <b> Email Id:</b><h2><i>$email</i></h2><br/>
 											<a href="market-place.html">Market Place</a>
 										</li>
 										<li>
-											<a href="contact-us.html" class="active">Contact Us</a>
+											<a href="contactus.php" class="active">Contact Us</a>
 										</li>
-										<a href="login.html" class="btn btn-secondary-color ls-0 btn-login">
-											<span>Become a Member</span>
-										</a>
+										<a href="https://memberzone.biznis.international/auth/register" class="btn btn-secondary-color ls-0 btn-login">
+										<span>Join</span>
+									</a>
+									<a href="https://memberzone.biznis.international/auth/login?returnUrl=%2F" class="btn btn-secondary-color ls-0 btn-login">
+										<span>Login</span>
+									</a>
 									</ul><!-- End .menu -->
 								</nav><!-- End .main-nav -->
 							</div>
@@ -391,7 +388,7 @@ get back to him through his <b> Email Id:</b><h2><i>$email</i></h2><br/>
 				</div>
 				<div class="col-md-6 d-flex justify-content-flex-end align-items-center">
 					<div class="d-flex gap-4">
-						<p><a href="contact-us.html">Contact Us</a></p>
+						<p><a href="contactus.php">Contact Us</a></p>
 						<p>Terms & Conditions</p>
 						<p>Privacy Policy</p>
 					</div>
@@ -424,11 +421,14 @@ get back to him through his <b> Email Id:</b><h2><i>$email</i></h2><br/>
 						<a href="market-place.html">Market Place</a>
 					</li>
 					<li>
-						<a href="contact-us.html" class="active">Contact Us</a>
+						<a href="contactus.php" class="active">Contact Us</a>
 					</li>
-					<a href="login.html" class="btn btn-secondary-color ls-0 btn-login">
-						<span>Become a Member</span>
-					</a>
+					<a href="https://memberzone.biznis.international/auth/register" class="btn btn-secondary-color ls-0 btn-login">
+										<span>Join</span>
+									</a>
+									<a href="https://memberzone.biznis.international/auth/login?returnUrl=%2F" class="btn btn-secondary-color ls-0 btn-login">
+										<span>Login</span>
+									</a>
 				</ul>
 			</nav>
 
