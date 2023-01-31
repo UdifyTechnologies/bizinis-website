@@ -105,27 +105,38 @@ try {
 
     //Recipients
     $mail->setFrom($email,$uname);
-    #'bhanutej94@gmail.com.com', 'BizNis Team');
-    $mail->addAddress('admin@udifytech.com', 'BizNis Team');     //Add a recipient
+    #'bhanutej94@gmail.com.com', 'BizNis Team');    //Add a recipient
     $mail->addAddress('team@biznis.international','BizNis Team');               //Name is optional
     // $mail->addReplyTo('info@example.com', 'Information');
 
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = "Recieved message from $uname";
     $mail->Body    ="
-    <img src='https://biznis.international/assets/images/main-logo.svg' ><br>
-    <br>
-Hello! BizNis Team we got enquiry from 
-<h1 style='color:#061840;font-family:poppins;'>$uname</h1> 
-Mobile Number <p style='color:#061840;font-size: 25px;font-family:poppins;'> $mobnum </p>
-get back to him through his <b> Email Id:</b><h2>$email</h2><br/>
- and Message he mentioned with us <br>
-<h3>Comments:</h3>
-<p style='color: #061840;font-size: 30px;font-family:poppins;'>$comment <p>
- <br> 
-    Thanking you";
+    <div>
 
-    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+    <img src='https://biznis.international/assets/images/bizNis-logo.png' width='250px'>
+<h3  style='color:#061840;margin:0px;'>Hello! BizNis Team we got enquiry from</h3> 
+<br><br>
+<div style='display:flex;'>
+<h4 style='color:#061840;margin:0px;'>Name:</h4>
+<h4 style='color:#061840;margin:0px;'> $uname</h4>
+</div><br>
+<div style='display:flex;'>
+<h4 style='color:#061840;margin:0px;'>Mobile Number:</h4> 
+<h4 style='color:#061840;margin:0px;'> $mobnum</h4>
+</div><br>
+<div style='display:flex;'>
+<h4 style='color:#061840;margin:0px;'>Email Id:</h4>
+<h4 style='color:#061840;margin:0px;'> $email</h4>
+</div><br>
+<div style='display:flex;'>
+<h4 style='color:#061840;margin:0px;'>Comments:</h4>
+<h4 style='color: #061840;margin:0px;'> $comment<h4>
+</div><br><br>  
+<h4 style='color:#061840;margin:0px;'>Thanking you</h4>
+    </div>  ";
+
+    // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();
    echo "<script>
@@ -156,7 +167,7 @@ get back to him through his <b> Email Id:</b><h2>$email</h2><br/>
 					<div class="header-middle ">
 							<div class="header-left">
 								<a href="index.html" class="logo">
-									<img src="assets/images/main-logo.svg" alt="Bizinis Logo">
+									<img src="assets/images/bizNis-logo.png" alt="Bizinis Logo">
 								</a>
 							</div>
 							<div class="header-right">
@@ -358,7 +369,7 @@ get back to him through his <b> Email Id:</b><h2>$email</h2><br/>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
-					<img src="assets/images/main-logo.svg" alt="">
+					<img src="assets/images/bizNis-logo.png" alt="">
 				</div>
 				<div class="col-md-6  d-flex justify-content-flex-end align-items-center">
 					<div class="social-icons">
