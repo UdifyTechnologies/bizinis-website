@@ -43,7 +43,8 @@
     @media only screen and (max-width: 767px) {
         .globe-row {
             display: flex !important;
-            flex-direction: column-reverse !important;
+            gap: 60px;
+            padding-top: 0px !important;
         }
         .card-row{
             display: block !important;

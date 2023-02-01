@@ -1130,14 +1130,6 @@ border-radius: 10px 10px 10px 0px;
 .footer1 img{
     width: 230px;
 }
-@media only screen and (max-width: 767px){
-
-.sec-1 .container-fluid .globe-row {
-    display: flex !important;
-    flex-direction: column-reverse !important;
-}
-
-}
 .pc-image img{
 border-radius: 0px 8px 8px 8px;
 }
