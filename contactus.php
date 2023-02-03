@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 
-    <title>Contact Us Bizinis - Landing Page</title>
+    <title>Contact - First verified business platform</title>
 
     <meta name="keywords" content="BIZINIS" />
     <meta name="description" content="BIZINIS">
@@ -95,20 +95,19 @@ $mail = new PHPMailer(true);
 try {
     //Server settings
    // $mail->SMTPDebug = 1;//SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-    $mail->isSMTP(true);                                            //Send using SMTP
-    $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
-    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'bhanutej94@gmail.com';                     //SMTP username
-    $mail->Password   = 'gktsguttlzrqysaq';                               //SMTP password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+   $mail->isSMTP(true);                                            //Send using SMTP
+   $mail->Host       = 'smtp.office365.com';                     //Set the SMTP server to send through
+   $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+   $mail->Username   = 'bhanutej94@gmail.com'; #'team@biznis.international';             //SMTP username
+   $mail->Password   = 'gktsguttlzrqysaq';       //SMTP password
+   $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+   $mail->Port       = 465;                            //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
-    //Recipients
-    $mail->setFrom($email,$uname);
-    #'bhanutej94@gmail.com.com', 'BizNis Team');    //Add a recipient
-    $mail->addAddress('team@biznis.international','BizNis Team');               //Name is optional
-    // $mail->addReplyTo('info@example.com', 'Information');
-
+   //Recipients
+   $mail->setFrom($email,$uname);
+   #'bhanutej94@gmail.com.com', 'BizNis Team');    //Add a recipient
+   $mail->addAddress('team@biznis.international','bizNis International');               //Name is optional
+   // $mail->addReplyTo('info@example.com', 'Information');
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = "Recieved message from $uname";
     $mail->Body    ="
