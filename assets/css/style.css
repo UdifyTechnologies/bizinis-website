@@ -433,15 +433,16 @@ margin-bottom: 20px !important;
 .globe{
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    margin-top: 100px;
+    align-items: flex-start;
 }
-.globe video{
-    width: 540px;
-    margin-top: 90px;
+.globe div{
+    margin-top: -100px;
+}
+.globe-row {
+    padding-top: 120px;
 }
 .sec-1{
-     padding: 60px 0px 100px 60px;
+     padding: 60px 0px 40px 60px;
 }
 .boxes{
     position: absolute;

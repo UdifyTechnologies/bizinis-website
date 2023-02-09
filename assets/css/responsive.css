@@ -41,6 +41,14 @@
     
     /* Mobile Layout: 320px. */
     @media only screen and (max-width: 767px) {
+        lottie-player{
+            width: 400px !important;
+            height: 400px !important;
+        }
+        .globe div {
+            margin-top: 0px;
+            margin-bottom: -80px;
+        }
         .globe-row {
             display: flex !important;
             gap: 60px;
